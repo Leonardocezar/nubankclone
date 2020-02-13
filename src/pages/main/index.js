@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { View
 } from 'react-native'
 import Header from '../../components/header';
@@ -11,6 +11,7 @@ import {PanGestureHandler,State} from 'react-native-gesture-handler';
 export default function Main(){
   let offset = 0;
   const translateY = new Animated.Value(0);
+  const [visibility, setVisibility] = useState(false)
   const animatedEvent = Animated.event(
     [
       {
@@ -65,13 +66,24 @@ export default function Main(){
             })
           }]
         }}>
-          <CardHeader>   
+          <CardHeader>
+            <View style={{flexDirection:'row',alignItems:'center'}}>
             <Icon name="attach-money" size={28} color="#666"/>
-            <Icon name="visibility-off" size={28} color="#666"/>      
+            <Title>Nu Conta</Title>
+            </View>
+            {visibility? 
+              <Icon name="visibility-off" size={28} color="#666" onPress={()=>setVisibility(false)}/>
+            :
+              <Icon name="visibility" size={28} color="#666" onPress={()=>setVisibility(true)}/> 
+            }     
           </CardHeader>
           <CardContent>
             <Title>Saldo Disponivel</Title>
+            {visibility?
             <Description>R$ 185.138,99</Description>
+              : 
+            <Description style={{backgroundColor:'#f7f7f7',color:'#f7f7f7',fontSize:13,width:130,height:28}}>R$ 185.138,99</Description>
+            }
           </CardContent>
           <CardFooter>
             <Annotation>
