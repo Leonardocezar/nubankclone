@@ -29,6 +29,10 @@ export default function Tabs({translateY}){
                 <TabText>Reccarga de celular</TabText>
             </TabItem>
             <TabItem>
+                <Icon name="chat-bubble-outline" size={24} color="#fff"/>
+                <TabText>Cobrar</TabText>
+            </TabItem>
+            <TabItem>
                 <Icon name="arrow-downward" size={24} color="#fff"/>
                 <TabText>Depositar</TabText>
             </TabItem>
@@ -37,8 +41,26 @@ export default function Tabs({translateY}){
                 <TabText>Transferir</TabText>
             </TabItem>
             <TabItem>
+                <Icon name="swap-horiz" size={24} color="#fff"/>
+                <TabText>Ajustar limite</TabText>
+            </TabItem>
+            <TabItem>
+                <Icon name="help-outline" size={24} color="#fff"/>
+                <TabText>Me Ajuda</TabText>
+            </TabItem>
+            <TabItem>
+                <Icon name="view-column" size={24} color="#fff"/>
+                <TabText>Pagar</TabText>
+            </TabItem>
+
+            <TabItem>
                 <Icon name="lock" size={24} color="#fff"/>
-                <TabText>Bloquear Cartão</TabText>
+                <TabText>Bloquear cartão</TabText>
+            </TabItem>
+
+            <TabItem>
+                <Icon name="credit-card" size={24} color="#fff"/>
+                <TabText>Cartão virtual</TabText>
             </TabItem>
         </TabsContainer>
         </Container>
