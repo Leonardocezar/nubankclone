@@ -6,10 +6,28 @@ export const Container = styled(Animated.ScrollView)`
     `;
 
 export const Code = styled.View`
-background:#FFF;
-padding:10px;
-align-self:center;
-  
+    padding:10px;
+    align-self:center;
+    align-items:center;
+    justify-content:center;
+`;
+export const ImageCode = styled.Image`
+    background:#fff;
+    width:120px;
+    height:120px;
+    margin-bottom:10px;
+`;
+export const BankCode = styled.Text`
+    color:#fff;
+    font-size:15px;
+`;
+export const AgencyCode = styled.Text`
+    color:#fff;
+    font-size:15px;
+`;
+export const AccountCode = styled.Text`
+    color:#fff;
+    font-size:15px;
 `;
 export const Nav = styled.View`
     margin-top:30px;
